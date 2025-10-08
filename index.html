@@ -1,7 +1,11 @@
 <h3>Hello</h3>
+<div>
+  <img >
+</div>
 <script>
   document.addEventListener('DOMContentLoaded',() => {
     fetch('https://120.24.226.69/storage/images/mrk/1746720241364-3.webp').then(res => res.blob()).then(blob => {
+      document.querySelector('img').src = URL.createObjectURL(blob);
       console.log(blob);
     });
   });
